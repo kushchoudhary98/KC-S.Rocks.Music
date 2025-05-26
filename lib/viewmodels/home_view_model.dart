@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:s_rocks_music/di/service_locator.dart';
 import 'package:s_rocks_music/models/service.dart';
 import 'package:s_rocks_music/services/home_service.dart';
 
 class HomeViewModel extends ChangeNotifier {
-  final HomeService _homeService = HomeService();
+   final HomeService _homeService = locator<HomeService>();
 
   bool _loading = false;
   List<ServiceModel> _services = [];

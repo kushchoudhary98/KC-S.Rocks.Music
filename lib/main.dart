@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:s_rocks_music/di/service_locator.dart';
 import 'package:s_rocks_music/utils/constants.dart';
 import 'package:s_rocks_music/utils/routes/route_names.dart';
 import 'package:s_rocks_music/utils/routes/routes.dart';
@@ -16,6 +17,7 @@ void main(List<String> args) async {
     options: DefaultFirebaseOptions.currentPlatform,
   );
 
+  setupLocator();
   runApp(MyApp());
 }
 
